@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="row table-wrapper">
+    <div class="col-md-10">
+      <h1 class="table-title">Bay Residences Floor Range (8 - 36) </h1>
+      <table>
+        <tr>
+          <th>Unit Number</th>
+          <th id="model">Model</th>
+          <th>Closed Area (square feet)</th>
+          <th>Total Area (square feet)</th>
+          <th>Closed Area (square meters)</th>
+          <th>Total Area (square meters)</th>
+          <th>Starting From</th>
+          <th>Estimated Monthly Maintance</th>
+        </tr>
+        <tr *ngFor="let value of bay_information; let index=index;">
+          <td>{{value.unitNumber}}</td>
+          <td>{{value.model}}</td>
+          <td>{{value.closedArea}}</td>
+          <td>{{value.totalArea}}</td>
+          <td>{{Math.floor(value.closedArea*0.092903)}}</td>
+          <td>{{Math.floor(value.totalArea*0.092903)}}</td>
+          <td>{{value.price}}</td>
+          <td>{{value.maintance}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row second table-wrapper">
+    <div class="col-md-10">
+      <h1 class="table-title">Tower Residences Floor Range (38 - 56)</h1>
+      <table>
+        <tr>
+          <th>Unit Number</th>
+          <th id="model">Model</th>
+          <th>Closed Area (square feet)</th>
+          <th>Total Area (square feet)</th>
+          <th>Closed Area (square meters)</th>
+          <th>Total Area (square meters)</th>
+          <th>Starting From</th>
+          <th>Estimated Monthly Maintance</th>
+        </tr>
+        <tr *ngFor="let value of tower_information; let index=index;">
+          <td>{{value.unitNumber}}</td>
+          <td>{{value.model}}</td>
+          <td>{{value.closedArea}}</td>
+          <td>{{value.totalArea}}</td>
+          <td>{{Math.floor(value.closedArea*0.092903)}}</td>
+          <td>{{Math.floor(value.totalArea*0.092903)}}</td>
+          <td>{{value.price}}</td>
+          <td>{{value.maintance}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row" style="text-align:center">
+
+    <button (click)="modal.show()" class="getPricesBtn" type="submit" name="getPrices">Get Full Price List</button>
+  </div>
+</div>
+<div
+ [ngClass]="{'contact-hover': collapseService.isCollapsed}" class="contact-wrapper col-sm-3">
+  <app-contact [title]="'Contact Sales Center'" [button-title]="'Contact Now'"
+   [removeBorder]='true'></app-contact>
+</div>
+<div class="modal fade" bsModal #modal="bs-modal"
+  tabindex="-1" role="dialog" aria-labelledby="getInformationModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-header">
+      <div class="mdl-header">
+        <h1 class="modal-title">Get Full Price List</h1>
+      </div>
+        <i (click)="modal.hide()" class="close fa-3x fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-contact-wrapper">
+          <app-contact [modal-style]="true"></app-contact>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,166 @@
-/* You can add global styles to this file, and also import other style files */
+/*!
+ * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=BioRhyme');
+
+ html, body, head, h2{
+  /*background: red;
+  background: -webkit-linear-gradient(#BBDCEF, #DEF0FA, #fff, #BBDCEF);
+  background: -o-linear-gradient(#BBDCEF, #DEF0FA, #fff, #BBDCEF);
+  background: -moz-linear-gradient(#BBDCEF,	#DEF0FA, #fff, #3CEEF8);
+  background: linear-gradient(#BBDCEF, #DEF0FA, #fff, #3CEEF8); */
+  background-repeat: no-repeat;
+  background-color: #fff;
+  font-family: 'Bubble One', serif;
+ }
+
+carousel .carousel.slide {
+  text-align: center;
+}
+.home-carousel .carousel-indicators {
+  display: none!important;
+}
+
+carousel .carousel.slide .carousel-inner {
+  position: relative;
+  left: 0;
+  right: 0;
+}
+.carousel-indicators {
+  display: none!important;
+}
+.home-carousel .carousel.slide .carousel-inner .slide .item  img {
+  max-height: 100%;
+}
+.modal-gallery-wrapper carousel .carousel.slide .carousel-control .right{
+  right: 1em;
+}
+.modal-gallery-wrapper carousel .carousel.slide .carousel-control .left{
+  left: 1em!important;
+}
+.carousel-control {
+  height: 10%;
+  bottom: 50%!important;
+  top: auto!important;
+  font-size: 8px;
+}
+.carousel-control.right{
+  background-color: transparent!important;
+  background-image: none!important;
+  /*background-image:linear-gradient(to right, #fff, #eee)!important;*/
+}
+.carousel-control.left{
+  /*background-image:linear-gradient(to left, #fff, #eee)!important;*/
+  background-color: transparent!important;
+  background-image: none!important;
+
+}
+
+
+.carousel-control > span {
+  display: inline-block!important;
+  font: normal normal normal 14px/1 FontAwesome!important;
+  font-size: 2em!important;
+  text-rendering: auto!important;
+  -webkit-font-smoothing: antialiased!important;
+  -moz-osx-font-smoothing: grayscale!important;
+  color: #045aa6;
+}
+.carousel-control.left > span::after {
+  content: "\f060"!important;
+}
+.carousel-control.right > span::after {
+  content: "\f061"!important;
+}
+.carousel-control  .icon-prev:before{
+  content: none!important;
+}
+.carousel-control  .icon-next:before{
+  content: none!important;
+}
+
+.floorplan-carousel.image-viewer.carousel-inner.carousel-item.item {
+  width: 100%;
+  height: auto;
+  transform: translateY(10%);
+  position: absolute!important;
+  left: 0!important;
+  right: 0!important;
+  margin: 0 auto!important;
+}
+.contact-wrapper {
+  z-index: 2;
+  width: 53px!important;
+  height: 53px!important;
+}
+.contact-wrapper {
+  position: fixed;
+  right: 2em;
+  top: 10em;
+  padding: 12px;
+  transition: width 1.5s, height 2s, top 2s;
+  overflow: hidden;
+}
+.contact-hover {
+  width: 80%!important;
+  height: 500px!important;
+  }
+footer {
+  z-index: -1;
+}
+.background span{
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif
+}
+
+.mdl-header {
+  border-bottom-color: #05B2D8!important;
+}
+@media screen and (min-width: 480px) {
+  .contact-wrapper {
+    width: 48px;
+    height: 44px;
+  }
+  .contact-hover {
+    width: 40%!important;
+    height: 600px!important;
+  }
+}
+@media screen and (min-width: 767px) {
+  .carousel-control {
+    height: 100%;
+    position: absolute;
+    bottom: 0!important;
+    top: auto!important;
+    font-size: 10px;
+  }
+
+  carousel .carousel.slide .carousel-inner {
+    transform: translateY(0%);
+  }
+  .home-carousel .carousel.slide {
+    height: 50vh!important;
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-wrapper {
+    width: 260px!important;
+    height: 64px!important;
+  }
+  .carousel-control {
+    font-size: 20px;
+  }
+  .contact-hover {
+    width: 25%!important;
+    height: 500px!important;
+  }
+  carousel .carousel.slide .carousel-inner {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+}

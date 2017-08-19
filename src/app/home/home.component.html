@@ -1,0 +1,203 @@
+<div
+[ngClass]="{'contact-hover': collapseService.isCollapsed}" class="contact-wrapper">
+  <app-contact></app-contact>
+</div>
+<div class="container-fluid">
+  <div class="row header">
+    <div class="col-md-12">
+      <div class="second-header">
+        <h1>Welcome to Missoni Baia,</h1>
+        <h2>Welcome to the Sweet Life.</h2>
+      </div>
+      <img style="box-shadow: none;"
+       class="header-image" alt="Artistic Introductory Picture" src="assets/images/misc/MissoniBaia_Campaign_Sailing-1.jpg" />
+    </div>
+  </div>
+</div>
+<div class="container-fluid opening">
+  <div class="row opening-text">
+    <div class="text-wrapper">
+      <p class="first-text">
+        Located in the fast-growing Edgewater neighborhood of Miami, Missoni Baia is the first-
+ever branded residences from Missoni, the iconic luxury fashion and design house
+founded in 1953. Missoni Baia Condominium, known as one of Miami’s most luxurious pre-
+construction condos, will be an impressive 200 feet of frontage on Biscayne Bay in
+East Edgewater providing the ultimate atmosphere for your enjoyment.
+      </p>
+      <p class="second-text">
+        The first truly boutique residences in Edgewater Miami is developed by OKO Group, one of Europe’s
+        most successful developers, designed by Internationally renowned Hani Rashid of
+        Asymptote Architecture and inspired by Missoni, one of the most legendary fashion
+        houses and most recognizable fashion labels in the world. Together they will CREATE
+        an evolution of Edgewater and add Missoni Baia Residences to the breathtaking Miami
+        Skyline.
+        The Missoni Baia condominium will be a luxury waterfront tower with 56 floors and 229
+        condo residences. All units will offer spectacular views of Biscayne Bay and the Miami
+        Skyline. The residences range from one bedroom, one bathroom up to four bedrooms,
+        six bedrooms + den, all perfectly designed around the basic principal of full amenity
+        and luxurious condominium while emphasizing low maintenance costs and move in ready
+        residences.
+        Fabulous gastronomy and nightlife await in Midtown, the Design District, and
+        Wynwood. Professional success in the business core of Downtown Miami and Brickell,
+        within minutes of South Beach. All the rhythm, energy, and appeal of the Magic City is
+        yours.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid fact-sheet-wrapper">
+  <h2 class="background"><span>Fact Sheet</span></h2>
+  <div class="building-features row">
+    <div class="col-sm-6 features">
+      <h3 class="background"><span>The Building</span></h3>
+      <ul class="features-list">
+        <li><p>229 residences ranging in size from 771 to 3,807 square feet</p></li>
+        <li><p>57 stories</p></li>
+        <li><p>200 linear feet of bayfront frontage</p></li>
+        <li><p>Minimalist modern design and architecture to maximize natural light</p></li>
+        <li><p>Minimum-relief balcony railings with support from interior of balcony</p></li>
+        <li><p>Balcony glass treated with frit and extending 10" lower than typical balconies to conceal slab with frosted glass</p></li>
+        <li><p>Exterior sculptural, structural columns wrapped in aluminum, framing the building</p></li>
+      </ul>
+    </div>
+    <div class="col-sm-6 fact-sheet-image">
+        <img (click)="showModal(0)" src="assets/images/misc/Tower_Day.jpg" />
+    </div>
+  </div>
+  <div class="row residences-features">
+    <div class="col-sm-push-7 col-sm-6 features">
+      <h3 class="background"><span>The Residences</span></h3>
+      <ul class="features-list">
+        <li><p>Direct bay and city views</p></li>
+        <li><p>Flow-through north and south residences with 270° views</p></li>
+        <li><p>10’-deep balconies facing the bay</p></li>
+        <li><p>8’-deep balconies facing the city</p></li>
+        <li><p>One to five bedroom residences</p></li>
+        <li><p>Double showerheads</p></li>
+        <li><p>Custom-designed European cabinetry</p></li>
+        <li>
+          <p>Gaggenau® appliances including:</p>
+          <ul>
+            <li>Microwave</li>
+            <li>Wine cooler</li>
+            <li>Cooktop</li>
+            <li>Side-by-side large fridge and freezer</li>
+            <li>Zone dishwasher</li>
+            <li>Hood above cooktop</li>
+            <li>Garbage disposal in sink</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="resident col-sm-pull-6 col-sm-6 fact-sheet-image">
+      <div class="col-md-6">
+        <img (click)=showModal(1) style="max-width: 100%; max-height: 1000%;" src="assets/images/residences/Missoni-Baia-Living-Area-Residence.jpg"/>
+      </div>
+      <div class="col-md-6">
+        <img (click)=showModal(2) style="max-width: 100%; max-height: 1000%;" src="assets/images/residences/Missoni-Baia-South-Balcony.jpg"/>
+      </div>
+      <div class="col-md-6">
+        <img (click)=showModal(3) style="max-width: 100%; max-height: 1000%;" src="assets/images/residences/Missoni-Baia-Kitchen.jpg"/>
+      </div>
+      <div class="col-md-6">
+        <img (click)=showModal(4) style="max-width: 100%; max-height: 1000%;" src="assets/images/residences/Missoni-Baia-Master-Bathroom.jpg"/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid downloads-wrapper">
+  <div class="row downloads">
+    <h2 class="background"><span>Download</span></h2>
+    <button   (click)="modal.show()" class="prices-button">Get Price List</button>
+  </div>
+</div>
+<div class="container-fluid deposits-schedule-wrapper">
+  <div class="row deposits-schedule-wrapper">
+    <h2 class="background"><span>Deposits Schedule</span></h2>
+    <ul class="schedule">
+      <li>20% - AT CONTRACT (NOW)</li>
+      <li>10% - AT GROUND BREAKING (Q3 2017)</li>
+      <li>10% - AT 25TH FLOOR POURING (Q2 2019)</li>
+      <li>10% - AT TOP OFF (Q1 2020)</li>
+      <li>50% - AT CLOSING (Q4 2020)</li>
+    </ul>
+  </div>
+</div>
+<div class="amenities-wrapper container-fluid" >
+  <div #amenitiesRow class="row amenities">
+    <div class="col-md-12 amenities-header-wrapper background">
+      <h2 class="amenities-header"><span>Amenites that apeal to both body and soul</span></h2>
+    </div>
+    <div class="col-md-12 amenities-text-wrapper">
+      <p class="amenities-text">
+        The unparalleled amenities that Missoni Baia Condo offers go far beyond those of any luxury residential buildings of this scale.
+        Building features include a tennis court, multiple swimming pools, cabanas, and one of Miami’s largest and most elegantly appointed spas.
+        Missoni Miami becomes a true lifestyle experience and nonetheless, a great investment in South Florida.
+      </p>
+      <div class="amenities-text learn-more">
+        <a routerLink="/amenities">Learn More</a>
+      </div>
+    </div>
+    <div class="col-md-12 amenities-images-wrapper">
+      <div class="col-md-4">
+        <img (click)=showModal(5)
+              class="align-bottom amenities-image" src="assets/images/amenities/Bayside-Terrace-Infinity-Pool.jpg" />
+      </div>
+      <div class="col-md-4">
+        <img (click)=showModal(6)
+               class="amenities-image" src="assets/images/amenities/Missoni-Baia-Gym.jpg" />
+      </div>
+      <div class="col-md-4">
+        <img (click)=showModal(7)
+              class="amenities-image" src="assets/images/amenities/Missoni-Baia-Spa.jpg" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid closing-wrapper">
+  <div class="row closing">
+    <div>
+      <h1>Come to Missoni Baia,</h1>
+      <h2>and Live Life Beautifuly.</h2>
+    </div>
+  </div>
+</div>
+<div class="modal fade" bsModal #modal="bs-modal"
+  tabindex="-1" role="dialog" aria-labelledby="getInformationModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-header">
+      <div class="mdl-header">
+        <h2 class="modal-title">Get Price List</h2>
+      </div>
+        <i (click)="modal.hide()" class="close fa-3x fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-contact-wrapper">
+          <app-contact [button-title]="'Get Price List'"
+          [modal-style]="true" ></app-contact>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Modal -->
+<div class="modal fade" bsModal #galleryModal="bs-modal"
+  tabindex="-1" role="dialog" aria-labelledby="carouselModal" aria-hidden="true">
+  <div class="modal-dialog modal-gallery-dialog">
+    <i (click)="galleryModal.hide()" class="close fa-3x fa fa-times" aria-hidden="true"></i>
+    <div class="modal-content modal-gallery-content">
+      <div class="modal-body modal-gallery-body">
+        <div class="modal-gallery-wrapper">
+          <carousel [(activeSlide)]="activeSlide" interval="0" style="position: relative" class="image_viewer">
+            <slide *ngFor="let img of images; let index=index">
+              <img class="galleryImg" src="{{img.url}}" alt="{{img.alt}}" />
+              <h4 class="galleryTitle">{{img.title}}</h4>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

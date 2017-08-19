@@ -1,0 +1,121 @@
+.introduction-container{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+
+.container-fluid {
+  font-size: 6px;
+}
+.container{
+  width: 85%;
+  height: 90vh;
+  position: relative;
+}
+#introductory-page {
+  background: url("../../assets/images/amenities/Missoni-Baia-Olympic-Pool.jpg") no-repeat center top;
+  background-size: cover;
+  width: 100%
+}
+#tennis-introduction {
+  background: url("../../assets/images/amenities/Tennis_Court.jpg") no-repeat center top;
+  background-size: cover;
+  width: 100%;
+}
+#gym-introduction {
+  background: url("../../assets/images/amenities/Missoni-Baia-Gym.jpg") no-repeat center top;
+  background-size: cover;
+  width: 100%;
+}
+
+#spa-introduction {
+  background: url("../../assets/images/amenities/Missoni-Baia-Spa.jpg") no-repeat center top;
+  background-size: cover;
+  width: 100%;
+}
+.introduction {
+  text-align: center;
+  margin-top: 3em;
+}
+.introductory-text {
+  text-align: left;
+  display: inline-block;
+
+}
+.introductory-text > h2 {
+  font-family: 'Comfortaa', serif;
+  font-size: 6em;
+  color: white;
+  background: transparent;
+}
+text{
+  fill: white;
+}
+
+
+.map > img {
+  max-width: 100%;
+}
+.amenitie-description {
+  text-align: center;
+}
+.amenitie-description > h2 {
+  margin: 0;
+  font-size: 4em;
+  background: transparent;
+}
+.description {
+  width: 60%;
+  display: inline-block;
+  font-family: 'Comfortaa', serif;
+  font-size: 1.8em;
+  text-align: left;
+  margin-top: 0.7em;
+}
+
+.description-container {
+  background: white;
+  background-size: cover;
+  z-index: 2;
+  padding: 3.3em;
+  overflow: hidden;
+  color: white;
+  background: #005A8C;
+}
+
+.pool {
+  position: absolute;
+}
+.description-images {
+  max-width: 80%;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+
+.row > div {
+  position: relative;
+  height: auto;
+}
+@media screen and (min-width: 767px) {
+  .introductory-text {
+
+  }
+  .container-fluid {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 998px) {
+  .container-fluid {
+    font-size: 12px;
+  }
+  .row.container{
+    background-attachment: fixed;
+  }
+}

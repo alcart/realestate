@@ -1,0 +1,257 @@
+header, footer {
+  font-size: 12px;
+}
+
+header {
+  z-index: 4;
+}
+.navbar {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 0px!important;
+}
+.navbar-header {
+  margin: 0;
+}
+.navbar-brand {
+  width: 12em;
+  height: auto;
+}
+#navbarToggle {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.navbarItem a {
+  color: #045aa6;
+  font-family: 'Comfortaa',serif;
+  margin: 0;
+  font-size: 1em;
+}
+
+.menuitem > a {
+  margin: 1em;
+  padding: 1.2em;
+  font-family: 'Comfortaa', serif;
+  color: #045aa6;
+  text-transform: none;
+}
+.menuitem > h4 {
+  margin-top: 1em;
+  font-family: 'Comfortaa', serif;
+  color: #045aa6;
+  text-transform: none;
+}
+.menuitem > a > i {
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+.item-active {
+  color: #000;
+  background-color: #f0f0f0;
+}
+.navbarItem:hover{
+  background-color: #f0f0f0;
+}
+.menuitem:hover {
+  cursor: pointer;
+}
+.dropdown-menu {
+  width: 230px;
+  text-align: center;
+}
+#dropdownBtn:hover{
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+#dropdownBtn {
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: none!important;
+  border: none;
+}
+#dropDown {
+  /*border: 10px;*/
+  margin: 5px;
+  /*padding: 10px 15px 10px 15px;*/
+}
+
+.navbar {
+  position: relative;
+  background-color: white;
+  filter: none;
+  z-index: 20;
+}
+#nav-list li {
+  text-transform: uppercase;
+  border: 10px;
+  text-transform: uppercase;
+  border: 10px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#navbarCollapsible {
+  border: none;
+  float: left;
+  margin-top: 0.5em;
+}
+
+footer {
+  height: auto;
+  border: 1px solid rgb(231, 231, 231);
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: white;
+  font-family: 'Comfortaa', serif;
+  color: #045aa6;
+  margin-top: 1em;
+}
+.footer-left {
+  text-align: center;
+}
+.footer-left-info {
+  margin-top: 2.2em;
+  text-align: center;
+}
+.footer-left-info p {
+  padding: 0.4em;
+}
+.footer-right-info {
+  text-align: center;
+}
+.footer-right-info img {
+  max-width: 60%;
+}
+.footer-header {
+  display: inline-block;
+  width: 12em;
+}
+#footer-header{
+}
+@media screen and (min-width: 768px) {
+  .navbarItem {
+    font-size: 1.9em;
+  }
+  header {
+    font-size: 8px;
+  }
+  footer {
+    font-size: 14px;
+  }
+  .navbar-inner{
+    position: relative;
+  }
+}
+@media screen and (min-width: 980px) {
+  .dropdown-menu {
+    left: -110%;
+    width: 27vw;
+  }
+  .navbarItem > a {
+    margin-top: 10px;
+    padding: 5px 10px 5px 0;
+    border-right: 1px solid #BFCAD3;
+  }
+  .navbarItem:last-child a{
+    border-right: none;
+  }
+  .btn-group {
+    position: absolute;
+    right: 10px;
+  }
+  #navbarCollapsible {
+    transform: translateX(10%);
+  }
+  #navbarCollapsible {
+    width: 76%;
+  }
+}
+@media screen and (min-width: 1200px) {
+
+  .dropdown-menu {
+    left: -90%;
+    width: 20vw;
+  }
+  .navbarItem {
+    font-size: 1.4em;
+  }
+  .btn-group {
+    /*position: absolute;*/
+    right: 10px;
+  }
+  .navbarItem > a {
+    margin-top: 10px;
+    padding: 5px 10px 5px 0;
+    border-right: 1px solid #BFCAD3;
+  }
+  .navbarItem:last-child a{
+    border-right: none;
+  }
+  #navbarCollapsible {
+    transform: translateX(20%);
+  }
+  #navbarCollapsible {
+    width: 76%;
+  }
+  header {
+    font-size: 12px;
+  }
+  footer {
+    font-size: 1em;
+  }
+  .footer-left {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-right-info {
+    text-align: right;
+    padding: 40px;
+    margin-right: 10%;
+  }
+}
+
+
+
+/*Bootstrap Navbar Collapse Modification*/
+@media (max-width: 768px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}

@@ -1,0 +1,51 @@
+<div class="container-fluid wrapper">
+  <div class='floorPlans row'  [style.display]="showImageViewer ? 'none' : 'inline-block'">
+    <h4 class="let-know">Click on Unit to see More detailed Floor Plan</h4>
+    <div class="bayUnits-wrapper col-sm-6 col-lg-6">
+      <h1>Bay Residences Floor Plans</h1>
+      <h3>Levels 8 - 36</h3>
+      <div class="floorplans-bay">
+        <canvas #canvas1 class="canvas-1" style="background-image: url('assets/images/floorplans/Bay-Residences-Key-Plan.jpg')"></canvas>
+        <img (load)="setProperties(1)" #bayUnits src="assets/images/floorplans/Bay-Residences-Key-Plan.jpg" class='bayUnits' alt="Missoni Baia Bay Residences Keyplan"
+        usemap="#Bay-Units" style="position:absolute;left:0;top:0;opacity:0;"/>
+        <map name="Bay-Units" id="Bay-Units">
+          <area *ngFor="let value of coords; let index=index" (mouseenter)="drawCanvas(1,index) "
+           (mouseleave)="deleteCanvas(1200, 832, 1)" (click)="showImage(1,index)" alt="index" title="" shape="poly" coords={{value.coords}} />
+        </map>
+      </div>
+    </div>
+    <div class="towerUnits-wrapper  col-sm-6 col-lg-6">
+      <h1>Tower Residences Floor Plans</h1>
+      <h3>Levels 38 - 56</h3>
+
+      <div class="floorplans-tower">
+        <canvas #canvas2 class="canvas-2"
+        style="background-image: url(assets/images/floorplans/Missoni-Baia-Tower-Residences-Key-Plan.jpg);position:relative;left:0;top:0;"></canvas>
+        <img (load)="setProperties(2)" #towerUnits src="assets/images/floorplans/Missoni-Baia-Tower-Residences-Key-Plan.jpg" class="towerUnits" alt="Missoni Baia Tower Residences Keyplan"
+        usemap="#Tower-Units" style="position:absolute;left:0;top:0;opacity:0" />
+        <map name="Tower-Units" id="#Tower-Units">
+          <area *ngFor="let value of coords2; let index=index" (mouseenter)="drawCanvas(2, index)"
+          (mouseleave)="deleteCanvas(1200, 832, 2)" (click)="showImage(2,index+6)" shape="poly" coords={{value.coords}} />
+        </map>
+      </div>
+    </div>
+    <div
+     [ngClass]="{'contact-hover': collapseService.isCollapsed}" class="contact-wrapper col-sm-3">
+      <app-contact [title]="'Contact Sales Center'" [button-title]="'Contact Now'"
+      [removeBorder]='true'></app-contact>
+    </div>
+  </div>
+  <div class="row carousel-row">
+    <div class="floorplan-carousel col-md-12"  [style.display]="showImageViewer ? 'block' : 'none'">
+      <i class="close-viewer fa fa-times fa-5x" aria-hidden=true (click)="hideImageViewer(1)"></i>
+      <carousel [(activeSlide)]="current_active" interval="0" style="position: relative" class="image_viewer">
+        <slide *ngFor="let value of coords; let index=index">
+          <img style="max-width: 100%;" *ngIf="value.url" src="{{value.url}}" alt="{{value.alt}}"/>
+        </slide>
+        <slide *ngFor="let value of coords2; let index=index">
+          <img style="max-width: 100%;" *ngIf="value.url" src="{{value.url}}" alt="{{value.alt}}"/>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,176 @@
+*:focus {
+  outline: none;
+}
+.wrapper {
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  padding-left: 5px;
+  display: inline-block;
+  font-size: 12px;
+  font-family: 'Lora', serif;
+  color: #fff;
+}
+.get-information-wrapper {
+  padding: 1em;
+  padding-bottom: 0;
+  position: relative;
+  box-shadow: 0 0 0 1em #045aa6;
+  background-color: #045aa6;
+}
+.get-information-wrapper:hover{
+  cursor: pointer;
+}
+.info {
+  display: block;
+}
+.get-information-wrapper > h4 {
+  display: none;
+}
+.contact-form {
+  background: rgba(4, 90, 166, 0.7);
+  background-clip: content-box;
+  box-shadow: 0 1em 0 1em rgba(4, 90, 166, 0.7);
+  border: 1em solid rgba(4, 90, 166, 0.7);
+  border-top: 0;
+  padding-top: 0;
+  border-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.minimize {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 2;
+  transition: transform 1s;
+}
+.minimize:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.form-group > label{
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+.form-group > input {
+  width: 80%;
+  border-radius: 0;
+  border: 0;
+}
+.submit-button-wrapper {
+  text-align: center;
+  width: 100%;
+}
+.submit-button {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
+  height: 60px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1.7em;
+  margin-top: 18px;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+.submit-button:hover {
+  cursor: pointer;
+  color: #000;
+
+  background-color: #fff;
+}
+.submit-button:active{
+  transform: translateY(4px);
+}
+.no-border {
+  border-bottom-left-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+}
+
+/*If is modal*/
+.contact-modal .get-information-wrapper {
+  display: none;
+}
+.contact-modal .contact-form {
+  background-color: white;
+  color: #05B2D8;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+.contact-modal .contact-form .form-group input {
+  outline: none;
+  border: 0.5px solid black;
+  color: black;
+  border-radius: 4px;
+  height: 3em;
+}
+.contact-modal .contact-form .submit-button-wrapper .submit-button {
+  background-color: #05B2D8;
+}
+.contact-modal .contact-form .submit-button-wrapper .submit-button:hover {
+  background-color: #C1C1FF!important;
+}
+.error {
+  font-size: 1.1em!important;
+  border-bottom: 1px solid #A4364C;
+  color: #A4364C;
+  animation: shake 0.4s linear;
+}
+@media screen and (min-width: 480px) {
+  .wrapper {
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .wrapper {
+    font-size: 12px;
+  }
+  .contact-form {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    font-size: 12px;
+  }
+  .get-information-wrapper > h4{
+    display: block;
+  }
+  .info {
+    display: none!important;
+  }
+  .contact-form {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .minimize {
+    display: block!important;
+  }
+  .submit-button {
+    width: 220px;
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
