@@ -1,4 +1,6 @@
-# Missoni1
+# Real Estate
+
+Using Angular 2 for the development of this project. And a Node.js server.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
