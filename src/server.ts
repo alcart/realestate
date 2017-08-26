@@ -23,8 +23,8 @@ const transporter = nodeMailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'info@missonimiamicondo.com',
-    pass: '7126867Am!'
+    user: '*****',
+    pass: '******'
   }
 })
 app.use(bodyParser.json());
